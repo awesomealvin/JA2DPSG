@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A63A081C-F174-43A2-803D-AEE64AB9986C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Framework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <IntDir>bin\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\</OutDir>
+    <IntDir>bin\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\include\;$(SolutionDir)\..\..\..\shared\API-FMOD\fmodstudioapi11007win-installer\api\lowlevel\inc\;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include\;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;$(SolutionDir)\..\..\..\shared\API-FMOD\fmodstudioapi11007win-installer\api\lowlevel\inc\;$(SolutionDir)\ExternalLibraries\Box2D\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\lib\x86\;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2-devel-2.0.8-VC\SDL2-2.0.8\lib\x86;$(SolutionDir)\..\..\..\shared\API-FMOD\fmodstudioapi11007win-installer\api\lowlevel\lib\;$(SolutionDir)\ExternalLibraries\Box2D\lib;%(AdditionalLibraryDirectories);$(SolutionDir)\..\..\..\shared\API-FMOD\fmodstudioapi11007win-installer\api\lowlevel\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;SDL2main.lib;SDL2.lib;SDL2_image.lib;fmod_vc.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>NotSet</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\include\;$(SolutionDir)\..\..\..\shared\API-FMOD\fmodstudioapi11007win-installer\api\lowlevel\inc\;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2-devel-2.0.8-VC\SDL2-2.0.8\include\;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\include;$(SolutionDir)\ExternalLibraries\Box2D\include;C:\Users\shooper\Desktop\Framework\SDL\SDL2-2.0.3</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_ttf-devel-2.0.14-VC\SDL2_ttf-2.0.14\lib\x86\;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86;$(SolutionDir)\..\..\..\shared\API-SDL\SDL2-devel-2.0.8-VC\SDL2-2.0.8\lib\x86;$(SolutionDir)\ExternalLibraries\Box2D\lib_release;%(AdditionalLibraryDirectories);$(SolutionDir)\..\..\..\shared\API-FMOD\fmodstudioapi11007win-installer\api\lowlevel\lib\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;SDL2main.lib;SDL2.lib;SDL2_image.lib;fmod_vc.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>NotSet</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="animatedsprite.h" />
+    <ClInclude Include="backbuffer.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="Blackboard.h" />
+    <ClInclude Include="BloodExplosion.h" />
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="DebugUI.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyAimingState.h" />
+    <ClInclude Include="EnemyDeadState.h" />
+    <ClInclude Include="EnemyDeathParticle.h" />
+    <ClInclude Include="EnemyDeathParticleSystem.h" />
+    <ClInclude Include="EnemyFindWeaponState.h" />
+    <ClInclude Include="EnemyFollowPlayerState.h" />
+    <ClInclude Include="EnemyHeadParticle.h" />
+    <ClInclude Include="EnemyStillState.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="Hand.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="IniParser.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Melee.h" />
+    <ClInclude Include="ObjectPool.h" />
+    <ClInclude Include="EntityTypes.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Gun.h" />
+    <ClInclude Include="inputhandler.h" />
+    <ClInclude Include="logmanager.h" />
+    <ClInclude Include="MyContactListener.h" />
+    <ClInclude Include="MyUtility.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticleEmitter.h" />
+    <ClInclude Include="PickupSensor.h" />
+    <ClInclude Include="Pistol.h" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Reticle.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="SplashArt.h" />
+    <ClInclude Include="sprite.h" />
+    <ClInclude Include="EnemyState.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="texturemanager.h" />
+    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="Weapon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="animatedsprite.cpp" />
+    <ClCompile Include="backbuffer.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="Blackboard.cpp" />
+    <ClCompile Include="BloodExplosion.cpp" />
+    <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="DebugUI.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyAimingState.cpp" />
+    <ClCompile Include="EnemyDeadState.cpp" />
+    <ClCompile Include="EnemyDeathParticle.cpp" />
+    <ClCompile Include="EnemyDeathParticleSystem.cpp" />
+    <ClCompile Include="EnemyFindWeaponState.cpp" />
+    <ClCompile Include="EnemyFollowPlayerState.cpp" />
+    <ClCompile Include="EnemyHeadParticle.cpp" />
+    <ClCompile Include="EnemyStillState.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="Hand.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="IniParser.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Melee.cpp" />
+    <ClCompile Include="ObjectPool.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="Gun.cpp" />
+    <ClCompile Include="inputhandler.cpp" />
+    <ClCompile Include="logmanager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyContactListener.cpp" />
+    <ClCompile Include="MyUtility.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="ParticleEmitter.cpp" />
+    <ClCompile Include="PickupSensor.cpp" />
+    <ClCompile Include="Pistol.cpp" />
+    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Reticle.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="SplashArt.cpp" />
+    <ClCompile Include="sprite.cpp" />
+    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="texturemanager.cpp" />
+    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
